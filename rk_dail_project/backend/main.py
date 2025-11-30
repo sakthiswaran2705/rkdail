@@ -2,10 +2,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # Import Routers
-from backend.category_get import router as category_router
-from backend.shop_owner_details import router as owner_router
-from backend.category_show_home import router as category_home_router
-
+from category_get import router as category_router
+from shop_owner_details import router as owner_router
+from category_show_home import router as category_home_router
 
 app = FastAPI()
 
@@ -18,11 +17,10 @@ app.add_middleware(
 )
 
 # Include Routers
-app.include_router(category_router)         # /category/get
-app.include_router(owner_router)            # shop owner routes
-app.include_router(category_home_router)    # home page category list, static search
+app.include_router(category_router)
+app.include_router(owner_router)
+app.include_router(category_home_router)
 
-# Root
 @app.get("/")
 def root():
-    return {"message": "Multiple APIs running!"}
+    return {"message": "API is running!"}
