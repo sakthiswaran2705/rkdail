@@ -105,7 +105,7 @@ def get_static(
             "city": safe(city) if city else None,
             "photo": safe(photo),
             "shop_name": s.get("shop_name") or s.get("name") or "",
-            "avg_rating": round(avg_rating, 1),      # ⭐ FINAL RATING
+            "avg_rating": round(avg_rating, 1),     
             "reviews_count": len(shop_reviews),
         })
 
