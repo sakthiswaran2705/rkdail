@@ -1,0 +1,8 @@
+fastapi,
+uvicorn,
+pymongo,
+hashlib,
+base64,
+bson,
+ObjectId,
+MongoClient,
